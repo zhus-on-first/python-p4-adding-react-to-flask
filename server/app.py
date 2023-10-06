@@ -1,3 +1,4 @@
+from pickle import TRUE
 from flask import Flask, request, make_response, jsonify
 from flask_cors import CORS
 from flask_migrate import Migrate
@@ -70,4 +71,4 @@ def messages_by_id(id):
     return response
 
 if __name__ == "__main__":
-    app.run(port=5555)
+    app.run(port=5555, debug=TRUE)
